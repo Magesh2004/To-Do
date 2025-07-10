@@ -1,0 +1,60 @@
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    height: 100vh;
+    background: var(--dark);
+}
+.title{
+    font-size: 70px;
+    color: #fff;
+    padding: 17px;
+    margin-bottom: 50px;
+}
+.side-bar a{
+    margin-top: auto;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.button-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 15px;
+    padding: 10px 17px;
+    background: var(--cat-bg);
+    color: #ffff;
+    position: relative;
+    font-family: var(--primary-font);
+}
+.button-cat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    width: 75%;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 11px;
+    background: var(--cat-bg);
+    color: #ffff;
+    font-family: var(--primary-font);
+}

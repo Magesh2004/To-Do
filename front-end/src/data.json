@@ -1,0 +1,86 @@
+[
+  {
+      "_id": "67ca9197e3fd999675944880",
+      "title": "Work",
+      "tasks": [
+          {
+              "_id": "67ca9197e3fd999675944876",
+              "task": "Complete project report",
+              "status": false,
+              "priority": "high"
+          },
+          {
+              "_id": "67ca9197e3fd99967594487c",
+              "task": "Fix bug in code",
+              "status": false,
+              "priority": "high"
+          }
+      ]
+  },
+  {
+      "_id": "67ca9197e3fd999675944881",
+      "title": "Personal",
+      "tasks": [
+          {
+              "_id": "67ca9197e3fd999675944877",
+              "task": "Buy groceries",
+              "status": true,
+              "priority": "mid"
+          },
+          {
+              "_id": "67ca9197e3fd999675944878",
+              "task": "Read a book",
+              "status": false,
+              "priority": "low"
+          },
+          {
+              "_id": "67ca9197e3fd99967594487a",
+              "task": "Go for a run",
+              "status": true,
+              "priority": "mid"
+          }
+      ]
+  },
+  {
+      "_id": "67ca9197e3fd999675944882",
+      "title": "Study",
+      "tasks": [
+          {
+              "_id": "67ca9197e3fd999675944879",
+              "task": "Prepare for exam",
+              "status": false,
+              "priority": "high"
+          }
+      ]
+  },
+  {
+      "_id": "67ca9197e3fd999675944883",
+      "title": "Health",
+      "tasks": [
+          {
+              "_id": "67ca9197e3fd99967594487b",
+              "task": "Organize desk",
+              "status": false,
+              "priority": "low"
+          },
+          {
+              "_id": "67ca9197e3fd99967594487e",
+              "task": "Plan weekend trip",
+              "status": false,
+              "priority": "low"
+          }
+      ]
+  },
+  {
+      "_id": "67ca9197e3fd999675944884",
+      "title": "Productivity",
+      "tasks": [
+          {
+              "_id": "67ca9197e3fd99967594487d",
+              "task": "Reply to emails",
+              "status": true,
+              "priority": "mid"
+          }
+      ]
+  }
+]

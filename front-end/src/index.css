@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bacasime+Antique&display=swap');
+:root{
+  --dark :#493D9E;
+  --light:#DAD2FF;
+  --cat-bg:#7A73D1;
+  --tasks-bg:#BBB6FF;
+  --task-bg:#D8D4FF;
+  --high:#D84040;
+  --low:#92E19C;
+  --mid:#CDE03F;
+  --primary-font:"Averia Serif Libre", serif;
+  --secondary-font:"Andika",sans-serif;
+  --third-font:"Bacasime Antique","DM Sans", serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  height: 100vh;
+  background: var(--light);
+}
