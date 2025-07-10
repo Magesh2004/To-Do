@@ -78,7 +78,7 @@ npm run dev  # Starts React app at http://localhost:5173
 
 ## 📸 UI Preview
 
-
+![Sreenshot](/Screenshot/image.png)
 
 ---
 
