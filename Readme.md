@@ -22,11 +22,22 @@ A full-stack **To-Do List application** built with the **MERN stack** (MongoDB, 
 
 ## 🛠️ Tech Stack
 
-| Frontend         | Backend        | Other Tools      |
-|------------------|----------------|------------------|
-| React + TypeScript | Node.js + Express | Axios, CSS Modules |
-| React Context API | MongoDB  | Vite ,Mongoose|
-| Custom Hooks      | RESTful APIs   | Postman (for testing) |
+### 🚀 Frontend
+
+* **React** with **TypeScript**
+* **Vite** (for blazing-fast development)
+* **React Context API** (state management)
+* **CSS Modules** (modular styling)
+* **Axios** (API communication)
+
+### 🧪 Backend
+
+* **Node.js** with **Express.js**
+* **MongoDB** (NoSQL database)
+* **Mongoose** (ODM for MongoDB)
+* **RESTful APIs** (standardized API design)
+
+
 
 ---
 
@@ -52,8 +63,6 @@ npm install
 npm run dev  # Starts server at http://localhost:8000
 ```
 
-> Make sure your `.env` includes your MongoDB connection URI
-
 ### 3. Setup Frontend
 
 ```bash
@@ -70,6 +79,7 @@ npm run dev  # Starts React app at http://localhost:5173
 | ------ | -------------------------- | --------------------- |
 | GET    | `/category`                | Fetch all categories  |
 | POST   | `/category`                | Create new category   |
+| GET    | `/category/:id`            | Tasks of a category   |
 | POST   | `/category/:id`            | Add task to category  |
 | PUT    | `/category/:cid/task/:tid` | Edit task in category |
 | DELETE | `/category/:cid/task/:tid` | Delete task           |
