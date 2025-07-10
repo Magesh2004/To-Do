@@ -1,4 +1,4 @@
-import "./Task/Task.css";
+import "../assets/Task.css";
 import Task from "./Task/Task";
 import TaskInput from "./Task/TaskInput";
 

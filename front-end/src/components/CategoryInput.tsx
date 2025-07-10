@@ -1,4 +1,4 @@
-import './CategoryInput.css';
+import '../assets/CategoryInput.css';
 import { useState } from 'react';
 import axios from 'axios';
 

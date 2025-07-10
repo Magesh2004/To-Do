@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "../assets/SideBar.css";
 import { useState } from "react";
 import CategoryInput from "./CategoryInput";
 
