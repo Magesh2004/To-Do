@@ -30,6 +30,10 @@ router.route('/:id/task/:tid')
     const{tid}=req.params;
     const uptask = await Task.findByIdAndUpdate(tid,req.body);
     sendResponse(res,200,true,"Succesfully Updated",{uptask})
+})).delete(catchAsync(async(req,res)=>{
+    const{tid}=req.params;
+    await Task.findByIdAndDelete(tid,req.body);
+    sendResponse(res,200,true,"Succesfully Deleted")
 }))
 
 module.exports = router

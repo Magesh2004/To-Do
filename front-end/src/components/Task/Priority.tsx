@@ -1,11 +1,12 @@
-const Priority = ({category}) => {
-  if (category == "high") {
+const Priority = ({ category }: { category: string }) => {
+  const level = category.toLowerCase()
+  if (level === "high") {
     return (
       <div className="priority-container high">
         <p>High</p>
       </div>
     );
-  } else if (category == "mid") {
+  } else if (level === "mid") {
     return (
       <div className="priority-container mid">
         <p>Mid</p>

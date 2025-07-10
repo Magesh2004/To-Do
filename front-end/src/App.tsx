@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SideBar from "./components/SIdeBar"
+import SideBar from "./components/SIdeBar";
 import TaskHolder from "./components/TaskHolder";
 import axios from "axios";
 
@@ -35,19 +35,22 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get<Category[]>("http://localhost:8000/category");
-        setData(res.data);
+        const res = await axios.get("http://localhost:8000/category");
+        setData(res.data.data.categories); 
       } catch (error) {
         console.error("Error fetching categories", error);
       }
     };
     fetchData();
   }, []);
-
+  const selectedCategoryId = data?.[selectedCat]?._id ?? "";
   return (
     <div className="App">
       <SideBar categories={fetchCategories()} changeTask={changeTask} />
-      <TaskHolder tasks={getTask()} />
+      <TaskHolder
+        tasks={getTask()}
+        categoryId={selectedCategoryId }
+      />
     </div>
   );
 };

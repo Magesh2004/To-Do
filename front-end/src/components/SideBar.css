@@ -44,6 +44,7 @@
     color: #ffff;
     position: relative;
     font-family: var(--primary-font);
+    cursor: pointer;
 }
 .button-cat{
     display: flex;
@@ -57,4 +58,5 @@
     background: var(--cat-bg);
     color: #ffff;
     font-family: var(--primary-font);
+    cursor: pointer;
 }

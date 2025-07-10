@@ -41,7 +41,7 @@ const SideBar = ({ categories, changeTask }: SideBarProps) => {
           </button>
         ))}
       </div>
-      <a href="">@ Magesh</a>
+      <a href="https://github.com/Magesh2004">@ Magesh</a>
     </div>
   );
 };

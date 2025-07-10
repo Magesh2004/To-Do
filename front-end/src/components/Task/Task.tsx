@@ -1,18 +1,39 @@
 import { useState } from "react";
 import Priority from "./Priority";
+import axios from "axios";
 import TaskEdit from "./TaskEdit";
-const Task = ({ task_content, priority }) => {
+interface TaskProps {
+  task_content: string;
+  priority: "High" | "Mid" | "Low";
+  _id: string;
+  categoryId: string;
+  status: boolean;
+}
+
+const Task = ({ task_content, priority, _id, categoryId, status }:TaskProps) => {
   const [isEdit, setIsEdit] = useState(false);
-  const [isDone, setIsDone] = useState(false);
+  const [isDone, setIsDone] = useState(status);
   const [isOpen, setIsOpen] = useState(false);
   const openEdit = () => {
     setIsEdit(!isEdit);
+  };
+  const handleDelete = async () => {
+    try {
+      await axios.delete(
+        `http://localhost:8000/category/${categoryId}/task/${_id}`
+      );
+      window.location.reload();
+    } catch (err) {
+      console.error("Error deleting task:", err);
+    }
   };
   return isEdit ? (
     <TaskEdit
       task_content={task_content}
       priority={priority}
       closeEdit={openEdit}
+      taskId={_id}
+      categoryId={categoryId}
     />
   ) : (
     <div className="task-container">
@@ -20,8 +41,20 @@ const Task = ({ task_content, priority }) => {
         <p>{task_content}</p>
         <div
           className="checkbox"
-          onClick={() => {
-            setIsDone(!isDone);
+          onClick={async () => {
+            const newStatus = !isDone;
+            setIsDone(newStatus);
+
+            try {
+              await axios.put(
+                `http://localhost:8000/category/${categoryId}/task/${_id}`,
+                {
+                  status: newStatus,
+                }
+              );
+            } catch (err) {
+              console.error("Error updating task status:", err);
+            }
           }}
         >
           {isDone && (
@@ -61,7 +94,9 @@ const Task = ({ task_content, priority }) => {
               <p className="drop-item" onClick={openEdit}>
                 Edit
               </p>
-              <p className="drop-item">Delete</p>
+              <p className="drop-item" onClick={handleDelete}>
+                Delete
+                </p>
             </div>
           )}
         </div>
